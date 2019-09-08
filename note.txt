@@ -1,0 +1,123 @@
+##INSTALAR PYTHON 3
+add-apt-repository -y ppa:jonathonf/python-3.6
+apt-get update -y
+apt-get install -y python3.6
+apt-get install -y python3.6-dev
+apt-get install -y python3.6-distutils
+
+sudo apt-get install python3-pip
+sudo pip3 install virtualenv 
+
+## Verificación de la descarga
+1. Correr `python3 --version` // Python 3.6.8
+2. Correr `pip3 --version`  // 
+
+## Entorno virtual
+1. Correr `python3 -m venv ENTORNO` donde `ENTORNO` sea el nombre deseado
+2. Correr `source ENTORNO/bin/activate` para activar el entorno
+3. Correr `deactivate` para desactivar el entorno
+
+
+
+##Crear Entorno Virtual
+$ python3 -m venv .env
+
+##Activar entorno virtual
+$ source .env/bin/activate 
+
+##Desactivar entorno virtual
+$ deactivate
+
+Instalar Django
+------------------
+pip install django -U
+pip freeze (ver librerias instaladas)
+
+Django==2.2.5
+pkg-resources==0.0.0
+pytz==2019.2
+sqlparse==0.3.0
+
+# django-admin: interfaz que permite correr otros subcomandos
+
+[django]
+    check
+    compilemessages
+    createcachetable
+    dbshell
+    diffsettings
+    dumpdata
+    flush
+    inspectdb
+    loaddata
+    makemessages
+    makemigrations
+    migrate
+    runserver
+    sendtestemail
+    shell
+    showmigrations
+    sqlflush
+    sqlmigrate
+    sqlsequencereset
+    squashmigrations
+    startapp
+    startproject
+    test
+    testserver
+
+En carpeta platzigram
+django-admin startproject
+
+$ django-admin startproject platzigram .
+
+Se crear folder llamado platzigram
+__init__.py : el objetivo es declarar platzigram como modulo depython
+settings.py : define todas las configuraciones
+
+urls.py : punto de entrada para todas las peticiones, va tratar de buscar la url requerida y va tratar de encontrarla con su vista correspondiente
+wsgi.py : archivo usado para el deployment para produccion
+manage.py : nunca tocaremos, una interfaz con django-admin
+settings.py : archivos de configuracion
+
+
+python3 manage.py 
+[auth]
+    changepassword
+    createsuperuser
+
+[contenttypes]
+    remove_stale_contenttypes
+
+[django]
+    check
+    compilemessages
+    createcachetable
+    dbshell
+    diffsettings
+    dumpdata
+    flush
+    inspectdb
+    loaddata
+    makemessages
+    makemigrations
+    migrate
+    sendtestemail
+    shell
+    showmigrations
+    sqlflush
+    sqlmigrate
+    sqlsequencereset
+    squashmigrations
+    startapp
+    startproject
+    test
+    testserver
+
+[sessions]
+    clearsessions
+
+[staticfiles]
+    collectstatic
+    findstatic
+    runserver
