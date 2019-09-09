@@ -148,3 +148,18 @@ Que es instancia de la clase Httpresponse
 
 *Instalar aLinter PEP8*
  /home/jorge/PycharmProjects/crud-minsa/venv/bin/python3.6 -m pip install -U pep8
+
+
+ # CREANDO APPLICACION
+ $ python3 manage.py startapp posts
+
+
+ Crearon archivos
+ posts/
+   - admin.py
+   - apps.py
+   - models.py
+
+1- En app.py agregar 
+    - varbose_name = 'Posts'
+2. En Setting platzigram, agregar app name
