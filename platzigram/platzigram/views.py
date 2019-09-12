@@ -8,7 +8,8 @@ import json
 
 
 def hello_world(request):
-    now = datetime.now().strftime('%b %dth, %Y - %H:%M hrs ')
+    now = datetime.now().strftime('%m/%d/%Y') 
+    # now = datetime.now().strftime('%b %dth, %Y - %H:%M hrs ')
     # return HttpResponse('Hola, Mundo! Django con Views')
     return HttpResponse('Oh, Hi! time server is {now}'.format(now=now))
 
