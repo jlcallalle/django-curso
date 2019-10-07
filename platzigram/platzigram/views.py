@@ -13,6 +13,10 @@ def hello_world(request):
     # return HttpResponse('Hola, Mundo! Django con Views')
     return HttpResponse('Oh, Hi! time server is {now}'.format(now=now))
 
+def numeral(request):
+    numbers2 = request.GET["numbers"]
+    return HttpResponse(str(numbers2))
+    #en url poner: http://127.0.0.1:8000/numeral/?numbers=12,12,50,32
 
 def sort_integers(request):
     # print(request)
@@ -39,6 +43,7 @@ def sort_integers(request):
 
 
 def say_hi(request, name, age):
+
     
     if age < 12:
         message = 'Sorry {}, no permitido'.format(name)
